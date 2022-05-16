@@ -381,23 +381,22 @@ let id_finder_excel = (schedule, conf, channel, running_video, current_time, exc
                         for (let k = 0; k < 5; k++) {
                             //advertisement
                             if ((schedule[i + 1].ad_point[k].start <= current_time) && (current_time <= schedule[i + 1].ad_point[k].end)) {
-                                //console.log(new Date(), 'cocos_ad_120s_us is streaming on the', schedule[i + 1].id);
                                 running_video.excel.pluto[channel] = conf.ad_name.pluto;
                                 running_video.excel.time = new Date(current_time);
                                 running_video.excel.play_time.current = current_time - schedule[i + 1].ad_point[k].start;
                                 running_video.excel.play_time.total = schedule[i + 1].ad_point[k].end - schedule[i + 1].ad_point[k].start;
-
                                 return "cocos_ad_120s_us";
                             }
                         }
                     }
-                    // console.log(new Date(), schedule[i + 1].id);
+                    // content
                     running_video.excel.pluto[channel] = schedule[i + 1].id;
                     running_video.excel.time = new Date(current_time);
                     for (let k = 0; k < 4; k++) {
                         if ((schedule[i + 1].ad_point[k].end < current_time) && (current_time < schedule[i + 1].ad_point[k + 1].start)) {
                             running_video.excel.play_time.current = current_time - schedule[i + 1].ad_point[k].end;
                             running_video.excel.play_time.total = schedule[i + 1].ad_point[k + 1].start - schedule[i + 1].ad_point[k].end;
+                            return 0;
                         }
                     }
                     if (current_time < schedule[i + 1].ad_point[0].start) {
@@ -417,7 +416,6 @@ let id_finder_excel = (schedule, conf, channel, running_video, current_time, exc
                     for (let k = 0; k < 5; k++) {
                         //advertisement
                         if ((schedule[0].ad_point[k].start <= current_time) && (current_time <= schedule[0].ad_point[k].end)) {
-                            //  console.log(new Date(), 'cocos_ad_120s_us is streaming on the ', schedule[0].id);
                             running_video.excel.pluto[channel] = conf.ad_name.pluto;
                             running_video.excel.time = new Date(current_time);
                             running_video.excel.play_time.current = current_time - schedule[0].ad_point[k].start;
@@ -427,13 +425,14 @@ let id_finder_excel = (schedule, conf, channel, running_video, current_time, exc
                         }
                     }
                 }
-                //console.log(new Date(), schedule[0].id);
+                //content
                 running_video.excel.pluto[channel] = schedule[0].id;
                 running_video.excel.time = new Date(current_time);
                 for (let k = 0; k < 4; k++) {
-                    if ((schedule[0].ad_point[k].end < current_time) && (current_time < schedule[0].ad_point[k + 1].start)) {
+                    if ( (schedule[0].ad_point[k].end < current_time) && (current_time < schedule[0].ad_point[k + 1].start) ) {
                         running_video.excel.play_time.current = current_time - schedule[0].ad_point[k].end;
                         running_video.excel.play_time.total = schedule[0].ad_point[k + 1].start - schedule[0].ad_point[k].end;
+                        return 0;
                     }
                 }
                 if (current_time < schedule[0].ad_point[0].start) {
