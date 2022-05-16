@@ -555,7 +555,71 @@ let parser_solrtmp_log = (conf) => {
 
 
 ///current time = '2022-05-04 00:01:34'
-let id_finder_solrtmp_log = (log, conf, running_video, current_time) => {
+let id_finder_solrtmp_log_from_end = (log, conf, running_video, current_time) => {
+    try {
+        let noc_log;
+        let debug_log;
+        for (let channel in log) {
+            //last line check
+            if (fetch_unix_timestamp(log[channel][log[channel].length - 1].time) == current_time) {
+                //console.log(channel, log[channel][log[channel].length - 1].video_id);
+                if (conf.option == 3) {
+                    running_video.solrtmp_log.pluto[channel] = id_synchronizer(log[channel][log[channel].length - 1].video_id, conf);
+                    running_video.solrtmp_log.time = new Date(current_time);
+                    running_video.solrtmp_log.play_time = log[channel][log[channel].length - 1].play_time;
+                }
+                if (conf.option == 1 || conf.option == 2) { running_video.solrtmp_log.samsung[channel] = id_synchronizer(log[channel][log[channel].length - 1].video_id, conf); }
+                continue;
+            }
+            //first line check
+            else if (current_time < fetch_unix_timestamp(log[channel][0].time)) {
+                throw new Error('[error] current time is earlier than the start time of log');
+            }
+            //middle line check
+            for (let line = 0; line < log[channel].length - 1; line++) {
+                if ((fetch_unix_timestamp(log[channel][line].time) <= current_time) && (current_time < fetch_unix_timestamp(log[channel][line + 1].time))) {
+                    // console.log(channel, log[channel][line].video_id);
+                    if (conf.option == 3) {
+                        running_video.solrtmp_log.pluto[channel] = id_synchronizer(log[channel][line].video_id, conf);
+                        running_video.solrtmp_log.time = new Date(current_time);
+                        running_video.solrtmp_log.play_time = log[channel][line].play_time;
+                    }
+                    if (conf.option == 1 || conf.option == 2) { running_video.solrtmp_log.samsung[channel] = id_synchronizer(log[channel][line].video_id, conf); }
+                    break;
+                }
+            }
+            if ( current_time < fetch_unix_timestamp(log[channel][log[channel].length - 1].time)-10000  ) {
+                if (conf.option == 1 || conf.option == 2) {
+                    if (channel in running_video.excel.samsung) {
+                        //console.log(channel, log[channel][log[channel].length - 1].video_id, " done");
+                        noc_log = new Date() + ' ' + channel + ' ' + log[channel][log[channel].length - 1].video_id + ' ' + "success";
+                        fs.appendFileSync('NOC.log', noc_log + '\n');
+                        delete running_video.excel.samsung[channel];
+                        running_video.terminated_channel.push(channel);
+                        if (Object.keys(running_video.excel.samsung).length == 0) {
+                            process.exit(1);
+                        }
+                    }
+                } else if (conf.option == 3) {
+                    if (solrtmp_log_channel == channel) {
+                        //console.log(channel, log[channel][log[channel].length - 1].video_id, " done");
+                        noc_log = new Date() + ' ' + channel + ' ' + log[channel][log[channel].length - 1].video_id + ' ' + "success";
+                        fs.appendFileSync('NOC.log', noc_log + '\n');
+                        process.exit(1);
+                    }
+
+                }
+            }
+
+        }
+    } catch (error) {
+        console.log(error);
+        process.exit(1);
+    }
+}
+
+
+let id_finder_solrtmp_log_from_start = (log, conf, running_video, current_time) => {
     try {
         let noc_log;
         let debug_log;
@@ -618,6 +682,7 @@ let id_finder_solrtmp_log = (log, conf, running_video, current_time) => {
     }
 }
 
+
 let samsung_smartTV = (json) => {
     try {
         for (let i = 0; i < json.length; i++) {
@@ -655,7 +720,7 @@ let module_excel = (running_video, conf, start_time_in_log) => {
             current_time.push(start_time_in_log);
             setInterval(
                 () => {
-                    current_time[sheet] = current_time_synchronizer(current_time[sheet], conf.period);
+                    current_time[sheet] = time_decrement(current_time[sheet], conf.period);
                     id_finder_excel(schedule[sheet], conf, sheet, running_video, current_time[sheet], excel);
                 }, conf.period / conf.test
             )
@@ -768,21 +833,38 @@ let start_time_finder_in_log = (log) => {
     return start_time;
 }
 
+let end_time_finder_in_log = (log) => {
+    let end_time = 0;
+    //let start_time=fetch_unix_timestamp('2032-04-05 08:55:21');
+    for (let channel in log) {
+            end_time = fetch_unix_timestamp(log[channel][log[channel].length-1].time);
+        }
+        return end_time;
+    }
 
-let current_time_synchronizer = (current_time, period) => {
+
+let time_increment = (current_time, period) => {
     current_time += period;
     return current_time;
 }
 
+let time_decrement = (current_time, period) => {
+    current_time -= period;
+    return current_time;
+}
+
+
 let module_solrtmp_log = (running_video, conf) => {
     try {
         let log = parser_solrtmp_log(conf);
-        let current_time = start_time_finder_in_log(log);
+       // let current_time = start_time_finder_in_log(log);
+       let current_time = end_time_finder_in_log(log);
+       
         setInterval(
             () => {
                 // let log = parser_solrtmp_log(conf);
-                current_time = current_time_synchronizer(current_time, conf.period);
-                id_finder_solrtmp_log(log, conf, running_video, current_time);
+                current_time = time_decrement(current_time, conf.period);
+                id_finder_solrtmp_log_from_end(log, conf, running_video, current_time);
             }, conf.period / conf.test
         )
 
