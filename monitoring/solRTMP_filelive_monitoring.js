@@ -547,6 +547,9 @@ let parser_solrtmp_log = (conf) => {
             let video_id = full_log[i].substr(full_log[i].indexOf('(main:')).split('/')[0].substr(6);
             let play_time = full_log[i].substr(index + 1).split(',')[0];
 
+            // if(i >= full_log.length-3){
+            //     console.log(full_log[i]);
+            // }    
             log[channel_id].push(new line(time, video_id, play_time));
         }
     }
@@ -588,7 +591,7 @@ let id_finder_solrtmp_log_from_end = (log, conf, running_video, current_time) =>
                     break;
                 }
             }
-            if ( current_time < fetch_unix_timestamp(log[channel][log[channel].length - 1].time)-10000  ) {
+            if ( current_time < fetch_unix_timestamp(log[channel][log[channel].length - 1].time)-20000  ) {
                 if (conf.option == 1 || conf.option == 2) {
                     if (channel in running_video.excel.samsung) {
                         //console.log(channel, log[channel][log[channel].length - 1].video_id, " done");
@@ -859,12 +862,12 @@ let module_solrtmp_log = (running_video, conf) => {
         let log = parser_solrtmp_log(conf);
        // let current_time = start_time_finder_in_log(log);
        let current_time = end_time_finder_in_log(log);
-       
+       //let current_time = Date.now();
+       //let current_time = Math.floor(new Date().getTime());
         setInterval(
             () => {
-                // let log = parser_solrtmp_log(conf);
-                current_time = time_decrement(current_time, conf.period);
                 id_finder_solrtmp_log_from_end(log, conf, running_video, current_time);
+                current_time = time_decrement(current_time, conf.period);
             }, conf.period / conf.test
         )
 
@@ -918,6 +921,7 @@ let streaming_detect = (running_video, err_count, conf, solrtmp_log_channel) => 
                     debug_log.solrtmp_log = '[solRTMP_log]' + new Date() + ' ' + channel + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + running_video.solrtmp_log.play_time + ' ' + 'success';
 
                     fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log + '\n');
+
                 } else {
                     debug_log = new Date() + ' ' + channel + ' ' + running_video.excel.samsung[channel] + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + running_video.solrtmp_log.play_time + ' ' + 'error';
                     //console.log(new Date(),channel, running_video.excel.samsung[channel], running_video.solrtmp_log.samsung[channel], "error");
@@ -1039,7 +1043,7 @@ let main = () => {
         initialize_err_count(solrtmp.log, schedule, conf, err_count);
 
         setInterval(() => {
-            streaming_detect(running_video, err_count, conf, solrtmp_log_channel)
+            streaming_detect(running_video, err_count, conf, solrtmp_log_channel);
         }, conf.period / conf.test);
 
     } catch (error) {
@@ -1049,4 +1053,5 @@ let main = () => {
 }
 
 main();
+
 
