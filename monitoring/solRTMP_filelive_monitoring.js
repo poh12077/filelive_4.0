@@ -454,27 +454,63 @@ let id_finder_excel = (schedule, conf, channel, running_video, current_time, exc
         }
         //samsung
         else if (conf.option == 1 || conf.option == 2) {
+            let play_time={
+                current:'',
+                total:''
+            }
+            let num_of_ad;
             for (let i = 0; i < schedule.length - 1; i++) {
                 if ((schedule[i].end_time < current_time) && (current_time <= schedule[i + 1].end_time)) {
-                    for (let k = 0; k < schedule[i + 1].ad_point.length; k++) {
+                    num_of_ad = schedule[i + 1].ad_point.length;
+                    for (let k = 0; k < num_of_ad; k++) {
                         if ((schedule[i + 1].ad_point[k].start <= current_time) && (current_time <= schedule[i + 1].ad_point[k].end)) {
                             // console.log(new Date(), 'cocos_ad_60s_20210528_2mbps is streaming on the', schedule[i + 1].id);
+                            //advertisement
                             if (excel.SheetNames[channel] == 'north america') {
                                 if (!running_video.terminated_channel.includes(mapping_table[channel])) {
                                     running_video.excel.samsung[mapping_table[channel]] = conf.ad_name.samsung_northern_america;
+                                    running_video.excel.time = new Date(current_time);
+                                    play_time.current = current_time - schedule[i + 1].ad_point[k].start;
+                                    play_time.total = schedule[i + 1].ad_point[k].end - schedule[i + 1].ad_point[k].start;
+                                    running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
+                                
                                 }
                             }
                             else {
                                 if (!running_video.terminated_channel.includes(mapping_table[channel])) {
                                     running_video.excel.samsung[mapping_table[channel]] = conf.ad_name.samsung_korea;
+                                    running_video.excel.time = new Date(current_time);
+                                    play_time.current = current_time - schedule[i + 1].ad_point[k].start;
+                                    play_time.total = schedule[i + 1].ad_point[k].end - schedule[i + 1].ad_point[k].start;
+                                    running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
                                 }
                             }
                             return "cocos_ad_60s_20210528_2mbps";
                         }
                     }
                     //console.log(new Date(), schedule[i + 1].id);
+                    //content
                     if (!running_video.terminated_channel.includes(mapping_table[channel])) {
                         running_video.excel.samsung[mapping_table[channel]] = schedule[i + 1].id;
+                        running_video.excel.time = new Date(current_time);
+                        for (let k = 0; k < num_of_ad-1; k++) {
+                            if ((schedule[i + 1].ad_point[k].end < current_time) && (current_time < schedule[i + 1].ad_point[k + 1].start)) {
+                                play_time.current = current_time - schedule[i + 1].ad_point[k].end;
+                                play_time.total = schedule[i + 1].ad_point[k + 1].start - schedule[i + 1].ad_point[k].end;
+                                running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
+                                return 0;
+                            }
+                        }
+                        if (current_time < schedule[i + 1].ad_point[0].start) {
+                            play_time.current = current_time - schedule[i].end_time;
+                            play_time.total = schedule[i + 1].ad_point[0].start - schedule[i].end_time;
+                            running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
+                        } else if (schedule[i + 1].ad_point[num_of_ad-1].end < current_time) {
+                            play_time.current = current_time - schedule[i + 1].ad_point[num_of_ad-1].end;
+                            play_time.total = schedule[i + 1].end_time - schedule[i + 1].ad_point[num_of_ad-1].end;
+                            running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
+                        }
+                       
                     }
                     return schedule[i + 1].id;
                 }
@@ -482,25 +518,53 @@ let id_finder_excel = (schedule, conf, channel, running_video, current_time, exc
 
             if ((conf.start_date_samsung[sheet_num] <= current_time) && (current_time <= schedule[0].end_time)) {
                 // the first video is streaming now
-                for (let k = 0; k < schedule[0].ad_point.length; k++) {
+                num_of_ad = schedule[0].ad_point.length;
+                for (let k = 0; k < num_of_ad; k++) {
                     if ((schedule[0].ad_point[k].start <= current_time) && (current_time <= schedule[0].ad_point[k].end)) {
-                        //console.log(new Date(), 'cocos_ad_60s_20210528_2mbps is streaming on the ', schedule[0].id);
+                        //advertisement
                         if (excel.SheetNames[channel] == 'north america') {
                             if (!running_video.terminated_channel.includes(mapping_table[channel])) {
                                 running_video.excel.samsung[mapping_table[channel]] = conf.ad_name.samsung_northern_america;
+                                running_video.excel.time = new Date(current_time);
+                                play_time.current = current_time - schedule[0].ad_point[k].start;
+                                play_time.total = schedule[0].ad_point[k].end - schedule[0].ad_point[k].start;
+                                running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
                             }
                         }
                         else {
                             if (!running_video.terminated_channel.includes(mapping_table[channel])) {
                                 running_video.excel.samsung[mapping_table[channel]] = conf.ad_name.samsung_korea;
+                                running_video.excel.time = new Date(current_time);
+                                play_time.current = current_time - schedule[0].ad_point[k].start;
+                                play_time.total = schedule[0].ad_point[k].end - schedule[0].ad_point[k].start;
+                                running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
                             }
                         }
                         return "cocos_ad_60s_20210528_2mbps";
                     }
                 }
-                //console.log(new Date(), schedule[0].id);
+                //content
                 if (!running_video.terminated_channel.includes(mapping_table[channel])) {
                     running_video.excel.samsung[mapping_table[channel]] = schedule[0].id;
+                    running_video.excel.time = new Date(current_time);
+                    for (let k = 0; k < num_of_ad-1; k++) {
+                        if ((schedule[0].ad_point[k].end < current_time) && (current_time < schedule[0].ad_point[k + 1].start)) {
+                            play_time.current = current_time - schedule[0].ad_point[k].end;
+                            play_time.total = schedule[0].ad_point[k + 1].start - schedule[0].ad_point[k].end;
+                            running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
+                            return 0;
+                        }
+                    }
+                    if (current_time < schedule[0].ad_point[0].start) {
+                        play_time.current = current_time -  conf.start_date_samsung[sheet_num];
+                        play_time.total = schedule[0].ad_point[0].start -  conf.start_date_samsung[sheet_num];
+                        running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
+                    } else if (schedule[0].ad_point[num_of_ad-1].end < current_time) {
+                        play_time.current = current_time - schedule[0].ad_point[num_of_ad-1].end;
+                        play_time.total = schedule[0].end_time - schedule[0].ad_point[num_of_ad-1].end;
+                        running_video.excel.play_time_samsung[mapping_table[channel]] = play_time;
+                    }
+
                 }
                 return schedule[0].id;
             }
@@ -572,14 +636,18 @@ let id_finder_solrtmp_log_from_end = (log, conf, running_video, current_time) =>
                 if (conf.option == 3) {
                     running_video.solrtmp_log.pluto[channel] = id_synchronizer(log[channel][log[channel].length - 1].video_id, conf);
                     running_video.solrtmp_log.time = new Date(current_time);
-                    running_video.solrtmp_log.play_time = log[channel][log[channel].length - 1].play_time;
+                    running_video.solrtmp_log.play_time[channel] = log[channel][log[channel].length - 1].play_time;
                 }
-                if (conf.option == 1 || conf.option == 2) { running_video.solrtmp_log.samsung[channel] = id_synchronizer(log[channel][log[channel].length - 1].video_id, conf); }
+                if (conf.option == 1 || conf.option == 2) { 
+                    running_video.solrtmp_log.samsung[channel] = id_synchronizer(log[channel][log[channel].length - 1].video_id, conf); 
+                    running_video.solrtmp_log.time = new Date(current_time);
+                    running_video.solrtmp_log.play_time[channel] = log[channel][log[channel].length - 1].play_time;
+                }
                 continue;
             }
             //first line check
             else if (current_time < fetch_unix_timestamp(log[channel][0].time)) {
-                throw new Error('[error] current time is earlier than the start time of log');
+               // throw new Error('[error] current time is earlier than the start time of log');
             }
             //middle line check
             for (let line = log[channel].length - 2; 0 <= line; line--) {
@@ -588,9 +656,13 @@ let id_finder_solrtmp_log_from_end = (log, conf, running_video, current_time) =>
                     if (conf.option == 3) {
                         running_video.solrtmp_log.pluto[channel] = id_synchronizer(log[channel][line].video_id, conf);
                         running_video.solrtmp_log.time = new Date(current_time);
-                        running_video.solrtmp_log.play_time = log[channel][line].play_time;
+                        running_video.solrtmp_log.play_time[channel] = log[channel][line].play_time;
                     }
-                    if (conf.option == 1 || conf.option == 2) { running_video.solrtmp_log.samsung[channel] = id_synchronizer(log[channel][line].video_id, conf); }
+                    if (conf.option == 1 || conf.option == 2) { 
+                        running_video.solrtmp_log.samsung[channel] = id_synchronizer(log[channel][line].video_id, conf); 
+                        running_video.solrtmp_log.time = new Date(current_time);
+                        running_video.solrtmp_log.play_time[channel] = log[channel][line].play_time;
+                    }
                     break;
                 }
             }
@@ -927,27 +999,46 @@ let streaming_detect = (running_video, err_count, conf, solrtmp_log_channel) => 
             for (let channel in running_video.excel.samsung) {
                 if (running_video.excel.samsung[channel] === running_video.solrtmp_log.samsung[channel]) {
                     err_count[channel] = 0;
-                    debug_log.excel = '[excel]    ' + new Date() + ' ' + channel + ' ' + running_video.excel.samsung[channel] + ' ' + running_video.excel.play_time + ' ' + 'success';
-                    debug_log.solrtmp_log = '[solRTMP_log]' + new Date() + ' ' + channel + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + running_video.solrtmp_log.play_time + ' ' + 'success';
+                 
+                    // debug_log.excel = new Date()+' [excel]       '+channel + ' ' + running_video.excel.samsung[channel] + ' ' + running_video.excel.play_time;
+                    // debug_log.solrtmp_log = new Date()+' [solRTMP_log] '+channel + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + running_video.solrtmp_log.play_time[channel];
+                    // fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log);
+                   
+                    debug_log.excel = running_video.excel.time+' [excel]       '+channel + ' ' + running_video.excel.samsung[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
+                    debug_log.solrtmp_log =running_video.solrtmp_log.time+' [solRTMP_log] '+channel + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
+                    fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log);
 
-                    fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log + '\n');
 
-                } else {
-                    debug_log = new Date() + ' ' + channel + ' ' + running_video.excel.samsung[channel] + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + running_video.solrtmp_log.play_time + ' ' + 'error';
-                    //console.log(new Date(),channel, running_video.excel.samsung[channel], running_video.solrtmp_log.samsung[channel], "error");
-                    fs.appendFileSync('debug.log', debug_log + '\n');
-                    err_count[channel]++;
-                    //need to fix
-                    if (err_count[channel] >= default_error_tolerance + conf.error_tolerance) {
-                        noc_log = new Date() + ' ' + channel + ' ' + running_video.excel.samsung[channel] + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + 'fail';
-                        //console.log( noc_log );
-                        fs.appendFileSync('NOC.log', noc_log + '\n');
-                        fs.appendFileSync('debug.log', noc_log + '\n');
-                        err_count[channel] = 0;
-                        delete running_video.excel.samsung[channel];
-                        running_video.terminated_channel.push(channel);
+                    let playtime_solrtmp = playtime_parser(running_video.solrtmp_log.play_time[channel]);
+
+                    if (Math.abs(playtime_solrtmp - running_video.excel.play_time.current / 1000) <= 10) {
+                        fs.appendFileSync('debug.log', ' success\n');
+                        fs.appendFileSync('NOC.log', running_video.excel.time + ' ' + channel + ' success\n' );
+                      //  process.exit(1);
+                    } else {
+                        fs.appendFileSync('debug.log', ' fail\n');
+                        fs.appendFileSync('NOC.log', running_video.excel.time + ' ' + channel + ' fail\n' );
+                    //    process.exit(1);
                     }
-                }
+
+
+                } 
+                // else {
+                //     debug_log = new Date() + ' ' + channel + ' ' + running_video.excel.samsung[channel] + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + running_video.solrtmp_log.play_time[channel] + ' ' + 'error';
+                //     //console.log(new Date(),channel, running_video.excel.samsung[channel], running_video.solrtmp_log.samsung[channel], "error");
+                //     fs.appendFileSync('debug.log', debug_log + '\n');
+                //     err_count[channel]++;
+                //     //need to fix
+                //     if (err_count[channel] >= default_error_tolerance + conf.error_tolerance) {
+                //         noc_log = new Date() + ' ' + channel + ' ' + running_video.excel.samsung[channel] + ' ' + running_video.solrtmp_log.samsung[channel] + ' ' + 'fail';
+                //         //console.log( noc_log );
+                //         fs.appendFileSync('NOC.log', noc_log + '\n');
+                //         fs.appendFileSync('debug.log', noc_log + '\n');
+                //         err_count[channel] = 0;
+                //         delete running_video.excel.samsung[channel];
+                //         running_video.terminated_channel.push(channel);
+                //     }
+                // }
             }
             //console.log('\n');
         } else if (conf.option == 3 || conf.option == 4) {
@@ -960,10 +1051,10 @@ let streaming_detect = (running_video, err_count, conf, solrtmp_log_channel) => 
                         fs.appendFileSync('debug.log', debug_log + '\n');
                         continue;
                     }
-                    let playtime_solrtmp = playtime_parser(running_video.solrtmp_log.play_time);
+                    let playtime_solrtmp = playtime_parser(running_video.solrtmp_log.play_time[solrtmp_log_channel]);
 
                     debug_log.excel = running_video.excel.time+' [excel]       '+solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
-                    debug_log.solrtmp_log =running_video.solrtmp_log.time+' [solRTMP_log] '+solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time;
+                    debug_log.solrtmp_log =running_video.solrtmp_log.time+' [solRTMP_log] '+solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
                     fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log);
 
                     if (Math.abs(playtime_solrtmp - running_video.excel.play_time.current / 1000) <= 10) {
@@ -1102,19 +1193,22 @@ let main = () => {
             play_time: {
                 current: '',
                 total: ''
+            },
+            play_time_samsung:{
+
             }
         },
         solrtmp_log: {
             pluto: {},
             samsung: {},
             time: '',
-            play_time: ''
+            play_time: {}
         },
         terminated_channel: []
     }
     try {
-        //const conf = read_conf_samsung('config_samsung.conf');
-        const conf = read_conf_pluto('config_pluto.conf');
+        const conf = read_conf_samsung('config_samsung.conf');
+       // const conf = read_conf_pluto('config_pluto.conf');
         // if( fs.existsSync('monitoring.log') ){
         //     fs.unlinkSync('monitoring.log'); 
         // }

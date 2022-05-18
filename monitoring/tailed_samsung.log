@@ -995,6 +995,3 @@
 2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/360p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/360p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
 2022-04-05 16:01:24 trace media/stream.cpp 1994 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/270p): lap=526585.080(sys=526585.080, diff=-0.000), sm=count bw=118kbps(v=54:214293782540:214293782540, a=64:-1), fps=29.97, schbuf=0/0
 2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/270p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/270p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
-aa
-bb
-cc
