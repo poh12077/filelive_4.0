@@ -4865,3 +4865,520 @@ Tue Apr 05 2022 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1
 2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
 2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
 2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+Tue Apr 05 2022 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 B120041702_D721_1083936 play=00:00:38.000/00:10:53.000
+Tue Apr 05 2022 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120041702_D721_1083936 play=00:25:47.488/00:25:58.000 fail
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+Tue Apr 05 2022 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 B120041702_D721_1083936 play=00:00:38.000/00:10:53.000
+Tue Apr 05 2022 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120041702_D721_1083936 play=00:25:47.488/00:25:58.000 fail
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:11 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:22.640/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:12 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:23.770/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:04:15 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_160_2-cocos_program_B120214099_D1_1065150/1080p) play=00:06:26.544/00:11:36.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/480p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/480p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/360p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/360p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/270p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/270p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오후 4:01:20 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 B120194952_D12 play=00:09:12.000/00:10:00.000
+2022. 4. 5. 오후 4:01:20 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 B120194952_D12 play=00:09:09.315/00:10:00.000 success
+2022. 4. 5. 오후 4:01:10 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213253_D1 play=00:03:43.000/00:15:00.000
+2022. 4. 5. 오후 4:01:10 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213253_D1 play=00:03:40.520/00:15:00.000 success
+2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/480p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/480p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/360p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/360p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 16:01:24 trace media/stream.cpp 2008 stream(id=dc942d76_e776_4c34_8e0c_f09008912455/270p): current schedule (main:schid_14_2-cocos_program_B120208878_D14/270p) play=00:07:25.812/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오후 4:01:10 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213253_D1 play=00:03:43.000/00:15:00.000
+2022. 4. 5. 오후 4:01:10 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213253_D1 play=00:03:40.520/00:15:00.000 success
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+5/12/2022, 10:39:21 AM [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+5/12/2022, 10:39:21 AM [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+5/12/2022, 10:39:21 AM [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+5/12/2022, 10:39:21 AM [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022. 5. 12. 오전 10:39:11 ccc B120130408_D1_1107505 B120130408_D1_1107505 [bug] time unsynchronization
+2022. 5. 12. 오전 10:39:01 ccc B120130408_D1_1107505 B120130408_D1_1107505 [bug] time unsynchronization
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022. 5. 12. 오전 10:39:11 [excel]       ccc B120130408_D1_1107505 play=00:15:13.000/00:15:50.000
+2022. 5. 12. 오전 10:39:11 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:36.278/00:15:50.000 fail
+2022. 5. 12. 오전 10:39:01 [excel]       ccc B120130408_D1_1107505 play=00:15:03.000/00:15:50.000
+2022. 5. 12. 오전 10:39:01 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:25.301/00:15:50.000 fail
+2022. 5. 12. 오전 10:38:51 [excel]       ccc B120130408_D1_1107505 play=00:14:53.000/00:15:50.000
+2022. 5. 12. 오전 10:38:51 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:14.293/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022. 5. 12. 오전 10:39:11 [excel]       ccc B120130408_D1_1107505 play=00:15:13.000/00:15:50.000
+2022. 5. 12. 오전 10:39:11 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:36.278/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 19. 오후 3:16:32 [excel]       ccc cocos_ad_60s_20210528_2mbps play=00:00:17.859/00:01:00.000
+ [solRTMP_log] ccc undefined undefined id 
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 20. 오전 9:54:38 [excel]       ccc B120130408_D2_1107511 play=00:08:24.430/00:10:56.000
+ [solRTMP_log] ccc undefined undefined Different id
+2022. 5. 20. 오전 9:54:28 [excel]       ccc B120130408_D2_1107511 play=00:08:14.430/00:10:56.000
+ [solRTMP_log] ccc undefined undefined Different id
+2022. 5. 20. 오전 9:54:18 [excel]       ccc B120130408_D2_1107511 play=00:08:04.430/00:10:56.000
+ [solRTMP_log] ccc undefined undefined Different id
+2022. 5. 20. 오전 9:54:08 [excel]       ccc B120130408_D2_1107511 play=00:07:54.430/00:10:56.000
+ [solRTMP_log] ccc undefined undefined Different id
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022. 5. 12. 오전 10:39:21 [excel]       ccc B120130408_D1_1107505 play=00:15:23.000/00:15:50.000
+2022. 5. 12. 오전 10:39:21 [solRTMP_log] ccc B120130408_D1_1107505 play=00:14:47.296/00:15:50.000 fail
+2022-05-12 10:38:59 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:25.301/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:10 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:36.278/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-05-12 10:39:21 trace media/stream.cpp 2033 stream(id=ccc/1080p): current schedule (main:schid_4_6-cocos_program_B120130408_D1_1107505/1080p) play=00:14:47.296/00:15:50.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 00:46:36 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_136_4-cocos_program_B120214099_D1_1065330/1080p) play=00:02:53.186/00:10:03.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 00:46:37 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_136_4-cocos_program_B120214099_D1_1065330/1080p) play=00:02:53.997/00:10:03.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 00:46:40 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_136_4-cocos_program_B120214099_D1_1065330/1080p) play=00:02:56.941/00:10:03.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 12:46:40 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:01:28.000/00:02:00.000
+2022. 4. 5. 오전 12:46:40 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:53.186/00:10:03.000 Different id
+2022. 4. 5. 오전 12:46:30 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:01:18.000/00:02:00.000
+2022. 4. 5. 오전 12:46:30 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:42.221/00:10:03.000 Different id
+2022. 4. 5. 오전 12:46:20 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:01:08.000/00:02:00.000
+2022. 4. 5. 오전 12:46:20 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:31.213/00:10:03.000 Different id
+2022. 4. 5. 오전 12:46:10 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:00:58.000/00:02:00.000
+2022. 4. 5. 오전 12:46:10 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:20.184/00:10:03.000 Different id
+2022-04-05 00:46:36 trace media/stream.cpp 2021 stream(id=2c56c2b9_aa3a_409e_a99b_37b01a746233/1080p): current schedule (main:schid_136_4-cocos_program_B120214099_D1_1065330/1080p) play=00:02:53.186/00:10:03.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 00:46:37 trace media/stream.cpp 2021 stream(id=bbdee46a_9840_4977_8d77_c88658513144/1080p): current schedule (main:schid_136_4-cocos_program_B120214099_D1_1065330/1080p) play=00:02:53.997/00:10:03.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 00:46:40 trace media/stream.cpp 2021 stream(id=36ca3c09_5d0a_4e24_b5f7_5ea059c8788f/1080p): current schedule (main:schid_136_4-cocos_program_B120214099_D1_1065330/1080p) play=00:02:56.941/00:10:03.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 12:46:40 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:01:28.000/00:02:00.000
+2022. 4. 5. 오전 12:46:40 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:53.186/00:10:03.000 Different id
+2022. 4. 5. 오전 12:46:30 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:01:18.000/00:02:00.000
+2022. 4. 5. 오전 12:46:30 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:42.221/00:10:03.000 Different id
+2022. 4. 5. 오전 12:46:20 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:01:08.000/00:02:00.000
+2022. 4. 5. 오전 12:46:20 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:31.213/00:10:03.000 Different id
+2022. 4. 5. 오전 12:46:10 [excel]       2c56c2b9_aa3a_409e_a99b_37b01a746233 cocos_ad_60s_20210528_2mbps play=00:00:58.000/00:02:00.000
+2022. 4. 5. 오전 12:46:10 [solRTMP_log] 2c56c2b9_aa3a_409e_a99b_37b01a746233 B120214099_D1_1065330 play=00:02:20.184/00:10:03.000 Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:05:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 fail
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:05:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 fail
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:05:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 fail
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:05:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 fail
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:05:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 fail
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:05.000/00:10:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:13.024/00:10:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:05.000/00:10:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:13.024/00:10:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:05.000/00:10:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:13.024/00:10:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:05.000/00:10:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:13.024/00:10:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:05.000/00:10:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:13.024/00:10:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:05.000/00:10:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 54ac8e25_eb5a_4f10_ba20_ffb254f0a16c B120181291_D6 play=00:05:13.024/00:10:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:00:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 fail
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 B120194952_D7 play=00:08:58.000/00:10:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 B120194952_D7 play=00:09:55.242/00:10:00.000 fail
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:01 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:14:53.000/00:15:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:00:57.333/00:15:00.000 fail
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 B120194952_D7 play=00:07:58.000/00:10:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 B120194952_D7 play=00:09:55.242/00:10:00.000 fail
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
+2022. 4. 5. 오전 8:56:01 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:01 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:51 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:51 [solRTMP_log] undefined undefined undefined Different id
+2022. 4. 5. 오전 8:55:41 [excel]       undefined undefined play=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:55:41 [solRTMP_log] undefined undefined undefined Different id
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:05:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 fail
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/1080p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/1080p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/720p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/720p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022-04-05 08:56:22 trace media/stream.cpp 2008 stream(id=151248c2_45a2_45a5_a31f_bb9fc72969dd/480p): current schedule (main:schid_17_1-cocos_program_B120178254_D17/480p) play=00:09:54.090/00:10:00.000, adlap=00:00:00.000/00:00:00.000
+2022. 4. 5. 오전 8:56:11 [excel]       2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.000/00:01:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] 2e874342_9a2c_48e9_9066_7ab3a3284a80 cocos_ad_60s_20210528_2mbps play=00:00:28.351/00:01:00.000 success
+2022. 4. 5. 오전 8:56:11 [excel]       e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:03.000/00:15:00.000
+2022. 4. 5. 오전 8:56:11 [solRTMP_log] e91c6419_2e45_4f6c_a646_b912658d73b8 B120213252_D1 play=00:01:08.320/00:15:00.000 success
