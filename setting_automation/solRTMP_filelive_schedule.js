@@ -609,128 +609,7 @@ let write_json_samsungTV_domestic = (json, k, file_name) => {
   }
 }
 
-let write_json_samsungTV_northern_america_1 = (json, file_name) => {
-  try {
-    let n = 1;
-    let schedule = new templete('samsung');
-
-    for (let i = 0; i < json.length; i++) {
-      if (json[i]['id'] != undefined) {
-
-        if (n == 1) {
-          let video =
-          {
-            "start_date": start_date,
-            "id": "schid_" + n.toString() + "_1",
-            "ch_id": "cocos_program_" + json[i].id,
-            "range":
-            {
-              "start": 0,
-              "end": ad_interval_northern_america
-            }
-          }
-          schedule.channel.schedule.list.push(video);
-        }
-        else {
-          let video =
-          {
-            "id": "schid_" + n.toString() + "_1",
-            "ch_id": "cocos_program_" + json[i].id,
-            "range":
-            {
-              "start": 0,
-              "end": ad_interval_northern_america
-            }
-          }
-          schedule.channel.schedule.list.push(video);
-        }
-
-        let advertisement =
-        {
-          "id": "schid_ad_" + n.toString() + "_1",
-          "ch_id": "cocos_ad_60s_us",
-          "range":
-          {
-            "start": 0,
-            "end": ad_duration_samsung_northern_america
-          }
-        }
-        schedule.channel.schedule.list.push(advertisement);
-
-        let m;
-        for (let j = 1; j > 0; j++) {
-          if (json[i]['__EMPTY'] <= ad_interval_northern_america * (j + 1)) {
-            m = j;
-            break;
-          }
-
-          let video =
-          {
-            "id": "schid_" + n.toString() + "_" + (j + 1).toString(),
-            "ch_id": "cocos_program_" + json[i].id,
-            "range":
-            {
-              "start": ad_interval_northern_america * j,
-              "end": ad_interval_northern_america * (j + 1)
-            }
-          }
-          if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-            console.log('[error] start == end ');
-            process.exit(1);
-          }
-
-          let advertisement =
-          {
-            "id": "schid_ad_" + n.toString() + "_" + (j + 1).toString(),
-            "ch_id": "cocos_ad_60s_us",
-            "range":
-            {
-              "start": 0,
-              "end": ad_duration_samsung_northern_america
-            }
-          }
-          schedule.channel.schedule.list.push(video);
-          schedule.channel.schedule.list.push(advertisement);
-        }
-
-        let video =
-        {
-          "id": "schid_" + n.toString() + "_" + (m + 1).toString(),
-          "ch_id": "cocos_program_" + json[i].id,
-          "range":
-          {
-            "start": ad_interval_northern_america * m,
-            "end": json[i]['__EMPTY'],
-          }
-        }
-
-        if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-          console.log('[error] start == end ');
-          process.exit(1);
-        }
-
-        schedule.channel.schedule.list.push(video);
-        n++;
-      }
-    }
-
-    n = 1;
-    file_name = file_name.split('.')[0];
-    file_name = '202204_' + file_name + '.json';
-    let file_json = JSON.stringify(schedule, null, "\t");
-    fs.writeFile('./json/' + file_name, file_json, function (err) {
-      if (err) {
-        console.log(err);
-      }
-    });
-  } catch (err) {
-    console.log('[error] samsungTV north america write');
-    console.log(err);
-    process.exit(1);
-  }
-}
-
-let write_json_plutoTV = (json, file_name) => {
+let write_json_plutoTV_1 = (json, file_name) => {
   try {
     n = 1;
     let schedule = new templete('pluto');
@@ -900,7 +779,7 @@ let write_json_plutoTV = (json, file_name) => {
   }
 }
 
-let write_json_samsungTV_northern_america_2 = (json, file_name) => {
+let write_json_samsungTV_northern_america = (json, file_name) => {
   try {
     n = 1;
     let schedule = new templete('samsung');
@@ -959,17 +838,18 @@ let write_json_samsungTV_northern_america_2 = (json, file_name) => {
           schedule.channel.schedule.list.push(advertisement);
           
           let end;
-          for (let j = 1; 0 < j; j++) {
-            end =j;
-            if (json[i]['Ad Point ' + (j + 1).toString()] != undefined) {
+          let num=1;
+          while (true) {
+            end =num;
+            if (json[i]['Ad Point ' + (num + 1).toString()] != undefined) {
               let video =
               {
-                "id": "schid_" + n.toString() + "_" + (j + 1).toString(),
+                "id": "schid_" + n.toString() + "_" + (num + 1).toString(),
                 "ch_id": "cocos_program_" + json[i].id,
                 "range":
                 {
-                  "start": time_converter(json[i]['Ad Point ' + j.toString()]),
-                  "end": time_converter(json[i]['Ad Point ' + (j + 1).toString()]),
+                  "start": time_converter(json[i]['Ad Point ' + num.toString()]),
+                  "end": time_converter(json[i]['Ad Point ' + (num + 1).toString()]),
                 }
               }
 
@@ -980,7 +860,7 @@ let write_json_samsungTV_northern_america_2 = (json, file_name) => {
 
               let advertisement =
               {
-                "id": "schid_ad_" + n.toString() + "_" + (j + 1).toString(),
+                "id": "schid_ad_" + n.toString() + "_" + (num + 1).toString(),
                 "ch_id": "cocos_ad_60s_us",
                 "range":
                 {
@@ -990,6 +870,349 @@ let write_json_samsungTV_northern_america_2 = (json, file_name) => {
               }
               schedule.channel.schedule.list.push(video);
               schedule.channel.schedule.list.push(advertisement);
+              num++;
+            } else {
+              break;
+            }
+          }
+
+          let video =
+          {
+            "id": "schid_" + n.toString() + "_" + (end+1).toString(),
+            "ch_id": "cocos_program_" + json[i].id,
+            "range":
+            {
+              "start": time_converter(json[i]['Ad Point '+ end.toString()]),
+              "end": json[i]['__EMPTY'],
+            }
+          }
+
+          if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+            console.log('[error] start == end ');
+            process.exit(1);
+          }
+
+          schedule.channel.schedule.list.push(video);
+          n++;
+        } else {
+          //no advertisement
+          if (n == 1) {
+            let video =
+            {
+              "start_date": start_date,
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": json[i]['__EMPTY'],
+              }
+            }
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+            schedule.channel.schedule.list.push(video);
+          }else {
+            let video =
+            {
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": json[i]['__EMPTY'],
+              }
+            }
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+            schedule.channel.schedule.list.push(video);
+          }
+          n++;
+        }
+      }
+    }
+    n = 1;
+    file_name = file_name.split('.')[0];
+    file_name = '202204_' + file_name + '.json';
+    let file_json = JSON.stringify(schedule, null, "\t");
+    fs.writeFile('./json/' + file_name, file_json, function (err) {
+      if (err) {
+        console.log(err);
+      }
+    });
+  } catch (err) {
+    console.log('[error] plutoTV write');
+    console.log(err);
+    process.exit(1);
+  }
+}
+
+let write_json_plutoTV_2 = (json, file_name) => {
+  try {
+    n = 1;
+    let schedule = new templete('pluto');
+
+    for (let i = 0; i < json.length; i++) {
+      if (json[i]['id'] != undefined) {
+        if (json[i]['Ad Point 1'] != undefined) {
+          if (n == 1) {
+            let video =
+            {
+              "start_date": start_date,
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": time_converter(json[i]['Ad Point 1']),
+              }
+            }
+
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+
+            schedule.channel.schedule.list.push(video);
+          }else {
+            let video =
+            {
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": time_converter(json[i]['Ad Point 1']),
+              }
+            }
+
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+            schedule.channel.schedule.list.push(video);
+          }
+
+          let advertisement =
+          {
+            "id": "schid_ad_" + n.toString() + "_1",
+            "ch_id": "cocos_ad_120s_us",
+            "range":
+            {
+              "start": 0,
+              "end": ad_duration_pluto
+            }
+          }
+          schedule.channel.schedule.list.push(advertisement);
+          
+          let end;
+          let num=1;
+          while (true) {
+            end =num;
+            if (json[i]['Ad Point ' + (num + 1).toString()] != undefined) {
+              let video =
+              {
+                "id": "schid_" + n.toString() + "_" + (num + 1).toString(),
+                "ch_id": "cocos_program_" + json[i].id,
+                "range":
+                {
+                  "start": time_converter(json[i]['Ad Point ' + num.toString()]),
+                  "end": time_converter(json[i]['Ad Point ' + (num + 1).toString()]),
+                }
+              }
+
+              if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+                console.log('[error] start == end ');
+                process.exit(1);
+              }
+
+              let advertisement =
+              {
+                "id": "schid_ad_" + n.toString() + "_" + (num + 1).toString(),
+                "ch_id": "cocos_ad_120s_us",
+                "range":
+                {
+                  "start": 0,
+                  "end": ad_duration_pluto
+                }
+              }
+              schedule.channel.schedule.list.push(video);
+              schedule.channel.schedule.list.push(advertisement);
+              num++;
+            } else {
+              break;
+            }
+          }
+
+          let video =
+          {
+            "id": "schid_" + n.toString() + "_" + (end+1).toString(),
+            "ch_id": "cocos_program_" + json[i].id,
+            "range":
+            {
+              "start": time_converter(json[i]['Ad Point '+ end.toString()]),
+              "end": json[i]['__EMPTY'],
+            }
+          }
+
+          if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+            console.log('[error] start == end ');
+            process.exit(1);
+          }
+
+          schedule.channel.schedule.list.push(video);
+          n++;
+        } else {
+          //no advertisement
+          if (n == 1) {
+            let video =
+            {
+              "start_date": start_date,
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": json[i]['__EMPTY'],
+              }
+            }
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+            schedule.channel.schedule.list.push(video);
+          }else {
+            let video =
+            {
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": json[i]['__EMPTY'],
+              }
+            }
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+            schedule.channel.schedule.list.push(video);
+          }
+          n++;
+        }
+      }
+    }
+    n = 1;
+    file_name = file_name.split('.')[0];
+    file_name = '202204_' + file_name + '.json';
+    let file_json = JSON.stringify(schedule, null, "\t");
+    fs.writeFile('./json/' + file_name, file_json, function (err) {
+      if (err) {
+        console.log(err);
+      }
+    });
+  } catch (err) {
+    console.log('[error] plutoTV write');
+    console.log(err);
+    process.exit(1);
+  }
+}
+
+let write_json_plutoTV_1080p_2 = (json, file_name) => {
+  try {
+    n = 1;
+    let schedule = new templete('pluto_1080p');
+
+    for (let i = 0; i < json.length; i++) {
+      if (json[i]['id'] != undefined) {
+        if (json[i]['Ad Point 1'] != undefined) {
+          if (n == 1) {
+            let video =
+            {
+              "start_date": start_date,
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": time_converter(json[i]['Ad Point 1']),
+              }
+            }
+
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+
+            schedule.channel.schedule.list.push(video);
+          }else {
+            let video =
+            {
+              "id": "schid_" + n.toString() + "_1",
+              "ch_id": "cocos_program_" + json[i].id,
+              "range":
+              {
+                "start": 0,
+                "end": time_converter(json[i]['Ad Point 1']),
+              }
+            }
+
+            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+              console.log('[error] start == end ');
+              process.exit(1);
+            }
+            schedule.channel.schedule.list.push(video);
+          }
+
+          let advertisement =
+          {
+            "id": "schid_ad_" + n.toString() + "_1",
+            "ch_id": "cocos_ad_120s_us",
+            "range":
+            {
+              "start": 0,
+              "end": ad_duration_pluto
+            }
+          }
+          schedule.channel.schedule.list.push(advertisement);
+          
+          let end;
+          let num =1;
+          while (true) {
+            end =num;
+            if (json[i]['Ad Point ' + (num + 1).toString()] != undefined) {
+              let video =
+              {
+                "id": "schid_" + n.toString() + "_" + (num + 1).toString(),
+                "ch_id": "cocos_program_" + json[i].id,
+                "range":
+                {
+                  "start": time_converter(json[i]['Ad Point ' + num.toString()]),
+                  "end": time_converter(json[i]['Ad Point ' + (num + 1).toString()]),
+                }
+              }
+
+              if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+                console.log('[error] start == end ');
+                process.exit(1);
+              }
+
+              let advertisement =
+              {
+                "id": "schid_ad_" + n.toString() + "_" + (num + 1).toString(),
+                "ch_id": "cocos_ad_120s_us",
+                "range":
+                {
+                  "start": 0,
+                  "end": ad_duration_pluto
+                }
+              }
+              schedule.channel.schedule.list.push(video);
+              schedule.channel.schedule.list.push(advertisement);
+              num++;
             } else {
               break;
             }
@@ -1070,7 +1293,7 @@ let write_json_samsungTV_northern_america_2 = (json, file_name) => {
 }
 
 
-let write_json_plutoTV_1080p = (json, file_name) => {
+let write_json_plutoTV_1080p_1 = (json, file_name) => {
   try {
     n = 1;
     let schedule = new templete('pluto_1080p');
@@ -1275,15 +1498,15 @@ let main = () => {
       else if (option == 2) {
         json = samsung_smartTV(json);
         json = verify(json);
-        write_json_samsungTV_northern_america_2(json, file_name);
+        write_json_samsungTV_northern_america(json, file_name);
       }
       else if (option == 3) {
         json = verify(json);
-        write_json_plutoTV(json, file_name);
+        write_json_plutoTV_2(json, file_name);
       }
       else if (option == 4) {
         json = verify(json);
-        write_json_plutoTV_1080p(json, file_name);
+        write_json_plutoTV_1080p_2(json, file_name);
       }
     }
   } catch (err) {
