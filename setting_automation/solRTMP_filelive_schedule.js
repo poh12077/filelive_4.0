@@ -449,7 +449,7 @@ let time_converter = (x) => {
         if (y.length != 3) {
           throw new Error();
         }
-        time = (parseInt(y[0]) * 3600 + parseInt(y[1]) * 60 + parseInt(y[2])) * 1000;
+        time = (parseInt(y[0]) * 3600 + parseInt(y[1]) * 60 + parseInt(y[2]) ) * 1000;
         return time;
       }
       else {
@@ -779,6 +779,18 @@ let write_json_plutoTV_1 = (json, file_name) => {
   }
 }
 
+let verify_start_end = (video) =>{
+ try{
+  if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+   
+    throw new Error()
+  } 
+ }catch(err){
+   console.log(err);
+  process.exit(1);
+ }
+}
+
 let write_json_samsungTV_northern_america = (json, file_name) => {
   try {
     n = 1;
@@ -800,10 +812,7 @@ let write_json_samsungTV_northern_america = (json, file_name) => {
               }
             }
 
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
 
             schedule.channel.schedule.list.push(video);
           }else {
@@ -818,10 +827,7 @@ let write_json_samsungTV_northern_america = (json, file_name) => {
               }
             }
 
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
             schedule.channel.schedule.list.push(video);
           }
 
@@ -853,10 +859,7 @@ let write_json_samsungTV_northern_america = (json, file_name) => {
                 }
               }
 
-              if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-                console.log('[error] start == end ');
-                process.exit(1);
-              }
+              verify_start_end(video);
 
               let advertisement =
               {
@@ -887,10 +890,7 @@ let write_json_samsungTV_northern_america = (json, file_name) => {
             }
           }
 
-          if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-            console.log('[error] start == end ');
-            process.exit(1);
-          }
+          verify_start_end(video);
 
           schedule.channel.schedule.list.push(video);
           n++;
@@ -908,10 +908,8 @@ let write_json_samsungTV_northern_america = (json, file_name) => {
                 "end": json[i]['__EMPTY'],
               }
             }
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+
+          verify_start_end(video);
             schedule.channel.schedule.list.push(video);
           }else {
             let video =
@@ -924,10 +922,7 @@ let write_json_samsungTV_northern_america = (json, file_name) => {
                 "end": json[i]['__EMPTY'],
               }
             }
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
             schedule.channel.schedule.list.push(video);
           }
           n++;
@@ -944,7 +939,6 @@ let write_json_samsungTV_northern_america = (json, file_name) => {
       }
     });
   } catch (err) {
-    console.log('[error] plutoTV write');
     console.log(err);
     process.exit(1);
   }
