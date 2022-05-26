@@ -554,10 +554,7 @@ let write_json_samsungTV_domestic = (json, k, file_name) => {
             }
           }
 
-          if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-            console.log('[error] start == end ');
-            process.exit(1);
-          }
+          verify_start_end(video);
 
           let advertisement =
           {
@@ -584,10 +581,7 @@ let write_json_samsungTV_domestic = (json, k, file_name) => {
           }
         }
 
-        if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-          console.log('[error] start == end ');
-          process.exit(1);
-        }
+        verify_start_end(video);
 
         schedule.channel.schedule.list.push(video);
         n++;
@@ -791,6 +785,20 @@ let verify_start_end = (video) =>{
  }
 }
 
+// //test
+// let verify_start_end = (video) =>{
+//   try{
+//    if (time_converter(video.range.start) >= time_converter(video.range.end)) {
+    
+//      throw new Error(video.ch_id)
+//    } 
+//   }catch(err){
+//     console.log(video.ch_id);
+//    //process.exit(1);
+//   }
+//  }
+
+ 
 let write_json_samsungTV_northern_america = (json, file_name) => {
   try {
     n = 1;
@@ -965,10 +973,7 @@ let write_json_plutoTV_2 = (json, file_name) => {
               }
             }
 
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
 
             schedule.channel.schedule.list.push(video);
           }else {
@@ -983,10 +988,8 @@ let write_json_plutoTV_2 = (json, file_name) => {
               }
             }
 
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
+
             schedule.channel.schedule.list.push(video);
           }
 
@@ -1018,10 +1021,7 @@ let write_json_plutoTV_2 = (json, file_name) => {
                 }
               }
 
-              if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-                console.log('[error] start == end ');
-                process.exit(1);
-              }
+              verify_start_end(video);
 
               let advertisement =
               {
@@ -1052,10 +1052,7 @@ let write_json_plutoTV_2 = (json, file_name) => {
             }
           }
 
-          if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-            console.log('[error] start == end ');
-            process.exit(1);
-          }
+          verify_start_end(video);
 
           schedule.channel.schedule.list.push(video);
           n++;
@@ -1073,10 +1070,8 @@ let write_json_plutoTV_2 = (json, file_name) => {
                 "end": json[i]['__EMPTY'],
               }
             }
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
+
             schedule.channel.schedule.list.push(video);
           }else {
             let video =
@@ -1089,10 +1084,9 @@ let write_json_plutoTV_2 = (json, file_name) => {
                 "end": json[i]['__EMPTY'],
               }
             }
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+
+            verify_start_end(video);
+
             schedule.channel.schedule.list.push(video);
           }
           n++;
@@ -1136,10 +1130,7 @@ let write_json_plutoTV_1080p_2 = (json, file_name) => {
               }
             }
 
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
 
             schedule.channel.schedule.list.push(video);
           }else {
@@ -1153,11 +1144,7 @@ let write_json_plutoTV_1080p_2 = (json, file_name) => {
                 "end": time_converter(json[i]['Ad Point 1']),
               }
             }
-
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
             schedule.channel.schedule.list.push(video);
           }
 
@@ -1189,10 +1176,7 @@ let write_json_plutoTV_1080p_2 = (json, file_name) => {
                 }
               }
 
-              if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-                console.log('[error] start == end ');
-                process.exit(1);
-              }
+              verify_start_end(video);
 
               let advertisement =
               {
@@ -1223,10 +1207,7 @@ let write_json_plutoTV_1080p_2 = (json, file_name) => {
             }
           }
 
-          if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-            console.log('[error] start == end ');
-            process.exit(1);
-          }
+          verify_start_end(video);
 
           schedule.channel.schedule.list.push(video);
           n++;
@@ -1244,10 +1225,7 @@ let write_json_plutoTV_1080p_2 = (json, file_name) => {
                 "end": json[i]['__EMPTY'],
               }
             }
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
             schedule.channel.schedule.list.push(video);
           }else {
             let video =
@@ -1260,10 +1238,7 @@ let write_json_plutoTV_1080p_2 = (json, file_name) => {
                 "end": json[i]['__EMPTY'],
               }
             }
-            if (time_converter(video.range.start) >= time_converter(video.range.end)) {
-              console.log('[error] start == end ');
-              process.exit(1);
-            }
+            verify_start_end(video);
             schedule.channel.schedule.list.push(video);
           }
           n++;
