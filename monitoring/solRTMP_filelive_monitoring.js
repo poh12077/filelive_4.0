@@ -287,6 +287,132 @@ let parser_excel = (json, conf, sheet, excel) => {
     }
 }
 
+
+let parser_excel_for_timetable = (json, conf, sheet, excel) => {
+    try {
+        let schedule = [];
+        let schedule_date = [];
+        
+        let sheet_num = 'sheet_' + sheet.toString();
+        let end_time;
+        if (conf.option == 1 || conf.option == 2) { end_time = conf.start_date_samsung[sheet_num] };
+        if (conf.option == 3 || conf.option == 4) { end_time = conf.start_date_pluto[sheet_num] };
+
+        let ad_list = [];
+        let ad_list_date =[];
+
+        let m;
+        if (conf.option == 1 || conf.option == 2) { m = conf.start_date_samsung[sheet_num] };
+        if (conf.option == 3 || conf.option == 4) { m = conf.start_date_pluto[sheet_num] };
+
+        for (let i = 0; i < json.length; i++) {
+            if (json[i].id !== undefined) {
+                end_time += json[i]['__EMPTY'];
+                //advertisement pluto
+                if (conf.option == 3 || conf.option == 4) {
+                    for (let k = 1; k < 6; k++) {
+                        if (json[i]['Ad Point ' + k.toString()] != undefined) {
+                            let ad = {
+                                start: '',
+                                end: ''
+                            }
+                            end_time += conf.ad_duration.pluto;
+                            ad.start = time_converter(json[i]['Ad Point ' + k.toString()]) + schedule[i - 2].end_time;
+                            if (k != 1) { ad.start += conf.ad_duration.pluto * (k - 1); }
+                            ad.end = ad.start + conf.ad_duration.pluto;
+                            
+                            ad_list.push(ad);
+
+                            let ad_date = {
+                                start: '',
+                                end: ''
+                            }
+                            ad_date.start = Unix_timestamp(ad.start/1000);
+                            ad_date.end = Unix_timestamp(ad.end/1000);
+
+                            ad_list_date.push(ad_date);
+                        }
+                    }
+                }
+                //advertisement samsung 
+                else if (conf.option == 1 || conf.option == 2) {
+                    //north america
+                    if (excel.SheetNames[sheet] === 'north america') {
+                        for (let k = 1; k > 0; k++) {
+                            if (json[i]['__EMPTY'] <= conf.ad_interval.samsung_northern_america * k) {
+                                break;
+                            }
+                            let ad = {
+                                start: '',
+                                end: ''
+                            }
+                            ad.start = m + conf.ad_interval.samsung_northern_america;
+                            ad.end = ad.start + conf.ad_duration.samsung_northern_america;
+                            m = ad.end;
+                            end_time += conf.ad_duration.samsung_northern_america;
+                            
+                            ad_list.push(ad);
+
+                            let ad_date = {
+                                start: '',
+                                end: ''
+                            }
+
+                            ad_date.start = Unix_timestamp(ad.start/1000);
+                            ad_date.end = Unix_timestamp(ad.end/1000);
+
+                            ad_list_date.push(ad_date);
+                        }
+                    } else {
+                        //korea
+                        for (let k = 1; k > 0; k++) {
+                            if (json[i]['__EMPTY'] <= conf.ad_interval.samsung_korea * k) {
+                                break;
+                            }
+                            let ad = {
+                                start: '',
+                                end: ''
+                            }
+
+                            ad.start = m + conf.ad_interval.samsung_korea;
+                            ad.end = ad.start + conf.ad_duration.samsung_korea;
+                            m = ad.end;
+                            end_time += conf.ad_duration.samsung_korea;
+                            
+                            ad_list.push(ad);
+
+                            let ad_date = {
+                                start: '',
+                                end: ''
+                            }
+
+                            ad_date.start = Unix_timestamp(ad.start/1000);
+                            ad_date.end = Unix_timestamp(ad.end/1000);
+                            
+                            ad_list_date.push(ad_date);
+                        }
+                    }
+                }
+                else {
+                    throw new Error('[error] configure option');
+                }
+                
+                schedule.push(new video_info(json[i]['id'], end_time, ad_list));
+                schedule_date.push(new video_info(json[i]['id'], Unix_timestamp(end_time/1000), ad_list_date));
+                ad_list = [];
+                ad_list_date=[];
+
+                m = end_time;
+            }
+        }
+        return schedule_date;
+    } catch (err) {
+        console.log(err);
+        process.exit(1);
+    }
+}
+
+
 //time = '2012-05-17 10:20:30'
 let id_finder_excel = (schedule, conf, channel, running_video, current_time, excel) => {
     try {
@@ -675,6 +801,14 @@ let samsung_smartTV = (json) => {
     }
 }
 
+let timetable_write = (schedule)=>{
+    for(let sheet=0; sheet<schedule.length; sheet++){
+          file_name =  sheet;
+            let file_json = JSON.stringify(schedule[sheet], null, "\t");
+            fs.writeFileSync("./timetable/" + file_name, file_json );
+    }
+}
+
 let module_excel = (running_video, conf, currentTime) => {
     try {
         let schedule = [];
@@ -689,7 +823,8 @@ let module_excel = (running_video, conf, currentTime) => {
             if (conf.option == 1 || conf.option == 2) {
                 json = samsung_smartTV(json);
             }
-            schedule.push(parser_excel(json, conf, sheet, excel));
+            schedule.push(parser_excel_for_timetable(json, conf, sheet, excel));
+            timetable_write(schedule);
             current_time.push(currentTime);
             setInterval(
                 () => {
@@ -704,7 +839,7 @@ let module_excel = (running_video, conf, currentTime) => {
     }
 }
 
-let file_write = (log, file_name) => {
+let solrtmp_log_write = (log, file_name) => {
     for (let x in log) {
         for (let i = 0; i < log[x].length; i++) {
             fs.appendFileSync(file_name, x + ' ' + log[x][i].time + ' ' + log[x][i].video_id + '\n');
@@ -840,7 +975,7 @@ let module_solrtmp_log = (running_video, conf) => {
             }, 0)
 
         //print_console(log);
-        //file_write(log, './workspace/test.log');
+        //solrtmp_log_write(log, './workspace/test.log');
         return {
             log: log,
             current_time: current_time
@@ -869,6 +1004,17 @@ let convert_unixTime_to_date = (time) => {
     }
     time = hours + ":" + minutes + ":" + seconds;
     return time;
+}
+
+function Unix_timestamp(t){
+    var date = new Date(t*1000);
+    var year = date.getFullYear();
+    var month = "0" + (date.getMonth()+1);
+    var day = "0" + date.getDate();
+    var hour = "0" + date.getHours();
+    var minute = "0" + date.getMinutes();
+    var second = "0" + date.getSeconds();
+    return year + "-" + month.substr(-2) + "-" + day.substr(-2) + " " + hour.substr(-2) + ":" + minute.substr(-2) + ":" + second.substr(-2);
 }
 
 let playtime_parser = (playtime) => {
@@ -1114,8 +1260,8 @@ let main = () => {
         terminated_channel: [],
     }
     try {
-        //const conf = read_conf_samsung('config_samsung.conf');
-        const conf = read_conf_pluto('config_pluto.conf');
+        const conf = read_conf_samsung('config_samsung.conf');
+       // const conf = read_conf_pluto('config_pluto.conf');
         // if( fs.existsSync('monitoring.log') ){
         //     fs.unlinkSync('monitoring.log'); 
         // }
