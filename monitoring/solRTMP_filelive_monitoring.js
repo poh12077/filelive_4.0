@@ -292,14 +292,14 @@ let parser_excel_for_timetable = (json, conf, sheet, excel) => {
     try {
         let schedule = [];
         let schedule_date = [];
-        
+
         let sheet_num = 'sheet_' + sheet.toString();
         let end_time;
         if (conf.option == 1 || conf.option == 2) { end_time = conf.start_date_samsung[sheet_num] };
         if (conf.option == 3 || conf.option == 4) { end_time = conf.start_date_pluto[sheet_num] };
 
         let ad_list = [];
-        let ad_list_date =[];
+        let ad_list_date = [];
 
         let m;
         if (conf.option == 1 || conf.option == 2) { m = conf.start_date_samsung[sheet_num] };
@@ -320,16 +320,14 @@ let parser_excel_for_timetable = (json, conf, sheet, excel) => {
                             ad.start = time_converter(json[i]['Ad Point ' + k.toString()]) + schedule[i - 2].end_time;
                             if (k != 1) { ad.start += conf.ad_duration.pluto * (k - 1); }
                             ad.end = ad.start + conf.ad_duration.pluto;
-                            
                             ad_list.push(ad);
 
                             let ad_date = {
                                 start: '',
                                 end: ''
                             }
-                            ad_date.start = Unix_timestamp(ad.start/1000);
-                            ad_date.end = Unix_timestamp(ad.end/1000);
-
+                            ad_date.start = Unix_timestamp(ad.start / 1000);
+                            ad_date.end = Unix_timestamp(ad.end / 1000);
                             ad_list_date.push(ad_date);
                         }
                     }
@@ -350,17 +348,14 @@ let parser_excel_for_timetable = (json, conf, sheet, excel) => {
                             ad.end = ad.start + conf.ad_duration.samsung_northern_america;
                             m = ad.end;
                             end_time += conf.ad_duration.samsung_northern_america;
-                            
                             ad_list.push(ad);
 
                             let ad_date = {
                                 start: '',
                                 end: ''
                             }
-
-                            ad_date.start = Unix_timestamp(ad.start/1000);
-                            ad_date.end = Unix_timestamp(ad.end/1000);
-
+                            ad_date.start = Unix_timestamp(ad.start / 1000);
+                            ad_date.end = Unix_timestamp(ad.end / 1000);
                             ad_list_date.push(ad_date);
                         }
                     } else {
@@ -378,17 +373,14 @@ let parser_excel_for_timetable = (json, conf, sheet, excel) => {
                             ad.end = ad.start + conf.ad_duration.samsung_korea;
                             m = ad.end;
                             end_time += conf.ad_duration.samsung_korea;
-                            
                             ad_list.push(ad);
 
                             let ad_date = {
                                 start: '',
                                 end: ''
                             }
-
-                            ad_date.start = Unix_timestamp(ad.start/1000);
-                            ad_date.end = Unix_timestamp(ad.end/1000);
-                            
+                            ad_date.start = Unix_timestamp(ad.start / 1000);
+                            ad_date.end = Unix_timestamp(ad.end / 1000);
                             ad_list_date.push(ad_date);
                         }
                     }
@@ -396,11 +388,11 @@ let parser_excel_for_timetable = (json, conf, sheet, excel) => {
                 else {
                     throw new Error('[error] configure option');
                 }
-                
+
                 schedule.push(new video_info(json[i]['id'], end_time, ad_list));
-                schedule_date.push(new video_info(json[i]['id'], Unix_timestamp(end_time/1000), ad_list_date));
+                schedule_date.push(new video_info(json[i]['id'], Unix_timestamp(end_time / 1000), ad_list_date));
                 ad_list = [];
-                ad_list_date=[];
+                ad_list_date = [];
 
                 m = end_time;
             }
@@ -676,7 +668,7 @@ let id_finder_solrtmp_log_from_end = (log, conf, running_video, current_time) =>
         let debug_log;
         for (let channel in log) {
             //last line check
-            if (fetch_unix_timestamp(log[channel][log[channel].length - 1].time) <= current_time && current_time < fetch_unix_timestamp(log[channel][log[channel].length - 1].time) + 10000 ) {
+            if (fetch_unix_timestamp(log[channel][log[channel].length - 1].time) <= current_time && current_time < fetch_unix_timestamp(log[channel][log[channel].length - 1].time) + 10000) {
                 //console.log(channel, log[channel][log[channel].length - 1].video_id);
                 if (conf.option == 3) {
                     running_video.solrtmp_log.pluto[channel] = id_synchronizer(log[channel][log[channel].length - 1].video_id, conf);
@@ -801,11 +793,31 @@ let samsung_smartTV = (json) => {
     }
 }
 
-let timetable_write = (schedule)=>{
-    for(let sheet=0; sheet<schedule.length; sheet++){
-          file_name =  sheet;
+let timetable_write = (schedule, conf) => {
+    try {
+        let start_date;
+        let file_name;
+        for(let sheet=0; sheet<schedule.length; sheet++){
+            if(conf.option ==1 ){
+                start_date = conf.start_date_samsung["sheet_" + sheet];
+                file_name = "samsung_korea_"+ sheet + ".json";
+            }else if(conf.option ==2 ){
+                start_date = conf.start_date_samsung["sheet_" + sheet];
+                file_name = "samsung_north_america_"+ sheet + ".json";
+            }
+            else if (conf.option ==3 || conf.option ==4){
+                start_date = conf.start_date_pluto["sheet_" + sheet];
+                file_name = "pluto_"+ sheet + ".json";
+            } 
+            schedule[sheet][0]["start_date"]= Unix_timestamp(start_date/1000);
             let file_json = JSON.stringify(schedule[sheet], null, "\t");
-            fs.writeFileSync("./timetable/" + file_name, file_json );
+            fs.writeFileSync("./timetable/" + file_name, file_json);
+        }
+        console.log("timetable was done");
+        process.exit(0);
+    } catch (err) {
+        console.log(err);
+        process.exit(1);
     }
 }
 
@@ -824,14 +836,14 @@ let module_excel = (running_video, conf, currentTime) => {
                 json = samsung_smartTV(json);
             }
             schedule.push(parser_excel_for_timetable(json, conf, sheet, excel));
-            timetable_write(schedule);
-            current_time.push(currentTime);
-            setInterval(
-                () => {
-                    id_finder_excel(schedule[sheet], conf, sheet, running_video, current_time[sheet], excel);
-                    current_time[sheet] = time_decrement(current_time[sheet], conf.period);
-                }, 0)
+        //    current_time.push(currentTime);
+        //     setInterval(
+        //         () => {
+        //             id_finder_excel(schedule[sheet], conf, sheet, running_video, current_time[sheet], excel);
+        //             current_time[sheet] = time_decrement(current_time[sheet], conf.period);
+        //         }, 0)
         }
+        timetable_write(schedule,conf);
         return schedule;
     } catch (err) {
         console.log(err);
@@ -1006,10 +1018,10 @@ let convert_unixTime_to_date = (time) => {
     return time;
 }
 
-function Unix_timestamp(t){
-    var date = new Date(t*1000);
+function Unix_timestamp(t) {
+    var date = new Date(t * 1000);
     var year = date.getFullYear();
-    var month = "0" + (date.getMonth()+1);
+    var month = "0" + (date.getMonth() + 1);
     var day = "0" + date.getDate();
     var hour = "0" + date.getHours();
     var minute = "0" + date.getMinutes();
@@ -1035,7 +1047,7 @@ let streaming_detect = (running_video, conf, solrtmp_log_channel, err_count) => 
             // detection loop
             for (let channel in running_video.excel.samsung) {
                 if (running_video.excel.samsung[channel] === running_video.solrtmp_log.samsung[channel]) {
-                    err_count[channel]=0;
+                    err_count[channel] = 0;
                     let playtime_solrtmp = playtime_parser(running_video.solrtmp_log.play_time[channel]);
 
                     if (Math.abs(playtime_solrtmp - running_video.excel.play_time_samsung[channel].current / 1000) <= 20) {
@@ -1063,13 +1075,13 @@ let streaming_detect = (running_video, conf, solrtmp_log_channel, err_count) => 
                             process.exit(1);
                         }
                     }
-                }else{
-                   
+                } else {
+
                     debug_log.excel = running_video.excel.time.toLocaleString() + ' [excel]       ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
                     debug_log.solrtmp_log = running_video.solrtmp_log.time.toLocaleString() + ' [solRTMP_log] ' + solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
                     fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log + ' Different id\n\n');
                     err_count[channel]++;
-                    if( 3 < err_count[channel]){
+                    if (3 < err_count[channel]) {
                         delete running_video.excel.samsung[channel];
                         running_video.terminated_channel.push(channel);
                         // if (Object.keys(running_video.excel.samsung).length == 0) {
@@ -1085,36 +1097,36 @@ let streaming_detect = (running_video, conf, solrtmp_log_channel, err_count) => 
             // detection loop
             for (let channel in running_video.excel.pluto) {
                 if (running_video.excel.pluto[channel] === running_video.solrtmp_log.pluto[solrtmp_log_channel]) {
-                    err_count[channel]=0;
+                    err_count[channel] = 0;
                     if (fetch_unix_timestamp(running_video.excel.time) != fetch_unix_timestamp(running_video.solrtmp_log.time)) {
-                        debug_log =new Date().toLocaleString() +' '+ running_video.solrtmp_log.time.toLocaleString() + ' ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + '[bug] time unsynchronization';
+                        debug_log = new Date().toLocaleString() + ' ' + running_video.solrtmp_log.time.toLocaleString() + ' ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + '[bug] time unsynchronization';
                         fs.appendFileSync('debug.log', debug_log + '\n\n');
                         continue;
                     }
                     let playtime_solrtmp = playtime_parser(running_video.solrtmp_log.play_time[solrtmp_log_channel]);
 
                     if (Math.abs(playtime_solrtmp - running_video.excel.play_time.current / 1000) <= 20) {
-                        debug_log.excel = new Date().toLocaleString() +' '+ running_video.excel.time.toLocaleString() + ' [excel]       ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
-                        debug_log.solrtmp_log = new Date().toLocaleString() +' '+ running_video.solrtmp_log.time.toLocaleString() + ' [solRTMP_log] ' + solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
-                        noc_log =new Date().toLocaleString() +' '+  solrtmp_log_channel + ' success\n';
+                        debug_log.excel = new Date().toLocaleString() + ' ' + running_video.excel.time.toLocaleString() + ' [excel]       ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
+                        debug_log.solrtmp_log = new Date().toLocaleString() + ' ' + running_video.solrtmp_log.time.toLocaleString() + ' [solRTMP_log] ' + solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
+                        noc_log = new Date().toLocaleString() + ' ' + solrtmp_log_channel + ' success\n';
                         fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log + ' success\n\n');
                         fs.appendFileSync('NOC.log', noc_log);
                         process.exit(1);
                     } else {
-                        debug_log.excel =new Date().toLocaleString() +' '+ running_video.excel.time.toLocaleString() + ' [excel]       ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
-                        debug_log.solrtmp_log =new Date().toLocaleString() +' '+ running_video.solrtmp_log.time.toLocaleString() + ' [solRTMP_log] ' + solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
-                        noc_log =new Date().toLocaleString() +' ' + solrtmp_log_channel + ' fail\n'
+                        debug_log.excel = new Date().toLocaleString() + ' ' + running_video.excel.time.toLocaleString() + ' [excel]       ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
+                        debug_log.solrtmp_log = new Date().toLocaleString() + ' ' + running_video.solrtmp_log.time.toLocaleString() + ' [solRTMP_log] ' + solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
+                        noc_log = new Date().toLocaleString() + ' ' + solrtmp_log_channel + ' fail\n'
                         fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log + ' fail\n\n');
                         fs.appendFileSync('NOC.log', noc_log);
                         process.exit(1);
                     }
-                }else{
-                    debug_log.excel =new Date().toLocaleString() +' '+ running_video.excel.time.toLocaleString() + ' [excel]       ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
-                    debug_log.solrtmp_log =new Date().toLocaleString() +' '+ running_video.solrtmp_log.time.toLocaleString() + ' [solRTMP_log] ' + solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
+                } else {
+                    debug_log.excel = new Date().toLocaleString() + ' ' + running_video.excel.time.toLocaleString() + ' [excel]       ' + solrtmp_log_channel + ' ' + running_video.excel.pluto[channel] + ' ' + 'play=' + convert_unixTime_to_date(running_video.excel.play_time.current) + '/' + convert_unixTime_to_date(running_video.excel.play_time.total);
+                    debug_log.solrtmp_log = new Date().toLocaleString() + ' ' + running_video.solrtmp_log.time.toLocaleString() + ' [solRTMP_log] ' + solrtmp_log_channel + ' ' + running_video.solrtmp_log.pluto[solrtmp_log_channel] + ' ' + running_video.solrtmp_log.play_time[solrtmp_log_channel];
                     fs.appendFileSync('debug.log', debug_log.excel + '\n' + debug_log.solrtmp_log + ' Different id\n\n');
                     err_count[channel]++;
-                    if( 3 < err_count[channel]){
-                        noc_log =new Date().toLocaleString() +' ' + solrtmp_log_channel + ' fail\n'
+                    if (3 < err_count[channel]) {
+                        noc_log = new Date().toLocaleString() + ' ' + solrtmp_log_channel + ' fail\n'
                         fs.appendFileSync('debug.log', 'Different id over 3\n\n');
                         fs.appendFileSync('NOC.log', noc_log);
                         throw new Error();
@@ -1261,7 +1273,7 @@ let main = () => {
     }
     try {
         const conf = read_conf_samsung('config_samsung.conf');
-       // const conf = read_conf_pluto('config_pluto.conf');
+       //  const conf = read_conf_pluto('config_pluto.conf');
         // if( fs.existsSync('monitoring.log') ){
         //     fs.unlinkSync('monitoring.log'); 
         // }
@@ -1273,7 +1285,7 @@ let main = () => {
         initialize_err_count(solrtmp.log, schedule, conf, err_count);
 
         setInterval(() => {
-            streaming_detect(running_video, conf, solrtmp_log_channel,err_count);
+            streaming_detect(running_video, conf, solrtmp_log_channel, err_count);
         }, 0);
 
     } catch (error) {
