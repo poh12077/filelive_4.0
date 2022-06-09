@@ -807,12 +807,6 @@ let timetable_write = (schedule, conf) => {
     try {
         let start_date;
         let file_name;
-        let json_order={
-            "id": null,
-            "seq": null,
-            "start_time": null,
-            "end_time": null
-        }
 
         for(let sheet=0; sheet<schedule.length; sheet++){
             if(conf.option ==1 ){
@@ -833,7 +827,6 @@ let timetable_write = (schedule, conf) => {
                 if( 0 < seq){
                     schedule[sheet][seq]["start_time"] = schedule[sheet][seq-1]["end_time"];
                 }
-                //schedule[sheet][seq] = Object.assign( json_order, schedule[sheet][seq]); 
                 schedule[sheet][seq] = preferredOrder(schedule[sheet][seq], [
                     "id",
                     "seq",
@@ -1305,8 +1298,8 @@ let main = () => {
         terminated_channel: [],
     }
     try {
-        const conf = read_conf_samsung('config_samsung.conf');
-       //  const conf = read_conf_pluto('config_pluto.conf');
+        //const conf = read_conf_samsung('config_samsung.conf');
+         const conf = read_conf_pluto('config_pluto.conf');
         // if( fs.existsSync('monitoring.log') ){
         //     fs.unlinkSync('monitoring.log'); 
         // }
