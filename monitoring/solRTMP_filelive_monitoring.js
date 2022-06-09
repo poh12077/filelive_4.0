@@ -793,10 +793,27 @@ let samsung_smartTV = (json) => {
     }
 }
 
+function preferredOrder(obj, order) {
+    var newObject = {};
+    for(var i = 0; i < order.length; i++) {
+        if(obj.hasOwnProperty(order[i])) {
+            newObject[order[i]] = obj[order[i]];
+        }
+    }
+    return newObject;
+}
+
 let timetable_write = (schedule, conf) => {
     try {
         let start_date;
         let file_name;
+        let json_order={
+            "id": null,
+            "seq": null,
+            "start_time": null,
+            "end_time": null
+        }
+
         for(let sheet=0; sheet<schedule.length; sheet++){
             if(conf.option ==1 ){
                 start_date = conf.start_date_samsung["sheet_" + sheet];
@@ -809,7 +826,23 @@ let timetable_write = (schedule, conf) => {
                 start_date = conf.start_date_pluto["sheet_" + sheet];
                 file_name = "pluto_"+ sheet + ".json";
             } 
-            schedule[sheet][0]["start_date"]= Unix_timestamp(start_date/1000);
+            schedule[sheet][0]["start_time"]= Unix_timestamp(start_date/1000);
+
+            for(let seq=0; seq < schedule[sheet].length; seq++ ){
+                schedule[sheet][seq]["seq"] = seq+1;
+                if( 0 < seq){
+                    schedule[sheet][seq]["start_time"] = schedule[sheet][seq-1]["end_time"];
+                }
+                //schedule[sheet][seq] = Object.assign( json_order, schedule[sheet][seq]); 
+                schedule[sheet][seq] = preferredOrder(schedule[sheet][seq], [
+                    "id",
+                    "seq",
+                    "start_time",
+                    "end_time",
+                    "ad_point"
+                ]);
+            }
+
             let file_json = JSON.stringify(schedule[sheet], null, "\t");
             fs.writeFileSync("./timetable/" + file_name, file_json);
         }
