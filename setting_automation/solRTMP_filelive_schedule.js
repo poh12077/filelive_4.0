@@ -147,6 +147,7 @@ class templete {
           },
           "hls": {
             "ad_marker": "scte35enh",
+            "discontinuity_seq": true,
             "memory_caching": false,
             "start_sequence_num": 0,
             "hls_version": 3,
@@ -777,7 +778,7 @@ let verify_start_end = (video) =>{
  try{
   if (time_converter(video.range.start) >= time_converter(video.range.end)) {
    
-    throw new Error()
+    throw new Error(video.ch_id)
   } 
  }catch(err){
    console.log(err);
@@ -785,7 +786,7 @@ let verify_start_end = (video) =>{
  }
 }
 
-// //test
+// // //test
 // let verify_start_end = (video) =>{
 //   try{
 //    if (time_converter(video.range.start) >= time_converter(video.range.end)) {
